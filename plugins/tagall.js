@@ -2,7 +2,7 @@ let WhatsAlexa = require('../events');
 let fs = require('fs');
 let {MessageType} = require('@adiwajshing/baileys');
 let Language = require('../language');
-let Config = require( ../config );
+let Config = require('../config');
 let Lang = Language.getString('tagall');
 let SLang = Language.getString('scrapers');
 
