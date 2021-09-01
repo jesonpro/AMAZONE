@@ -333,20 +333,38 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             // Görüşürüz Mesajı
             var gb = await getMessage(msg.key.remoteJid, 'goodbye');
             if (gb !== false) {
-                let pp
-                try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
-                await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message }); });
+                if (gb.message.includes('{gpp}')) {
+                    let ppUrl = await conn.getProfilePicture(msg.key.remoteJid) 
+                    let nwjson = await conn.groupMetadata(msg.key.remoteJid)
+                    const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
+                    let user = '@' + msg.messageStubParameters[0].split('@')[0]
+                    await conn.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message.replace('{gpp}', '').replace('{@user}', user).replace('{botowner}', config.OWNER).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
+                } else {
+                    let nwjson = await conn.groupMetadata(msg.key.remoteJid)
+                    let user = '@' + msg.messageStubParameters[0].split('@')[0]
+                    let pp
+                    try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
+                    await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+                    await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{gname}', nwjson.subject).replace('{@user}', user).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', config.OWNER) }); });
             }
             return;
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
             // Hoşgeldin Mesajı
             var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {
-               let pp
-                try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
-                await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message }); });
+                if (gb.message.includes('{gpp}')) {
+                    let ppUrl = await conn.getProfilePicture(msg.key.remoteJid) 
+                    let nwjson = await conn.groupMetadata(msg.key.remoteJid)
+                    const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
+                    let user = '@' + msg.messageStubParameters[0].split('@')[0]
+                    await conn.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message.replace('{gpp}', '').replace('{@user}', user).replace('{botowner}', config.OWNER).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
+                } else {
+                    let nwjson = await conn.groupMetadata(msg.key.remoteJid)
+                    let user = '@' + msg.messageStubParameters[0].split('@')[0]
+                    let pp
+                    try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
+                    await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+                    await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{gname}', nwjson.subject).replace('{@user}', user).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', config.OWNER) }); });
             }
             return;
         }
