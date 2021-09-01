@@ -288,12 +288,12 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
          
         while (getGMTh == 19 && getGMTm == 1) {
             var announce = ''
-            if (config.LANG == 'EN') announce = '📢 Announcement system is now been added to WhatsAlexa!! 🥳\nDaily We ( the developers ) will announce *events/features/something new* from this system 📝\nStay Connected ✅'
-            if (config.LANG == 'ML') announce = '📢 പ്രഖ്യാപന സംവിധാനം ഇപ്പോൾ WhatsAlexa- ൽ ചേർത്തിരിക്കുന്നു !! 🥳\nഎല്ലാ ദിവസവും ഞങ്ങൾ ( ഡവലപ്പർമാർ ) ഈ സിസ്റ്റത്തിൽ നിന്ന് *ഇവന്റുകൾ/സവിശേഷതകൾ/പുതിയ എന്തെങ്കിലും* പ്രഖ്യാപിക്കും 📝\nകണക്റ്റഡ് ആയി തുടരുക ✅'
-            if (config.LANG == 'ID') announce = '📢 Sistem pengumuman sekarang ditambahkan ke WhatsAlexa !! 🥳\nHarian Kami ( pengembang ) akan mengumumkan *acara/fitur/sesuatu yang baru* dari sistem ini 📝\nTetap Terhubung ✅'
+            if (config.LANG == 'EN') announce = '📢 New Version ( V4 First Release ) has Been Released Rhight now... 🥳\nAdded Few More Commands 🎯✨\nThis update was mainly to Change the Ropo due to the Database error & Private/Group Only Bugs!! 🎉'
+            if (config.LANG == 'ML') announce = '📢 പുതിയ പതിപ്പ് ( V4 First Release ) ഇപ്പോൾ റിലീസ് ചെയ്തു... 🥳\nകുറച്ച് കൂടുതൽ കമാൻഡുകൾ ചേർത്തിരിക്കുന്നു 🎯✨\nഈ അപ്ഡേറ്റ് പ്രധാനമായും ഡാറ്റാബേസ് പിശക് & സ്വകാര്യ/ഗ്രൂപ്പ് മാത്രം ബഗുകൾ കാരണം റോപ്പോ മാറ്റാൻ ആയിരുന്നു!! 🎉'
+            if (config.LANG == 'ID') announce = '📢 Versi Baru ( V4 First Release ) telah Dirilis Sekarang ...🥳\nMenambahkan Beberapa Perintah Lagi 🎯✨\nPembaruan ini terutama untuk Mengubah Ropo karena kesalahan Database & Bug Khusus Grup/Pribadi!! 🎉'
             
             let video = ''
-            let image = 'https://i.ibb.co/KGMms2Z/Whats-Alexa.jpg'
+            let image = 'https://thumbs.dreamstime.com/b/new-version-stamp-28261908.jpg'
             
             if (video.includes('http') || video.includes('https')) {
                 var VID = video.split('youtu.be')[1].split(' ')[0].replace('/', '')
