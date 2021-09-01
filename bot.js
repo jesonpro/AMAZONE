@@ -7,7 +7,7 @@ const config = require('./config');
 const axios = require('axios');
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
-const {Message, StringSession, Image, Video} = require('./whatsasena/');
+const {Message, StringSession, Image, Video} = require('./whatsalexa/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
@@ -23,7 +23,7 @@ const Language = require('./language');
 const Lang = Language.getString('updater');
 
 
-const WhatsAsenaDB = config.DATABASE.define('WhatsAsenaDuplicated', {
+const WhatsAlexaDB = config.DATABASE.define('WhatsAlexa', {
     info: {
       type: DataTypes.STRING,
       allowNull: false
