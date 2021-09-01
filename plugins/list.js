@@ -1,4 +1,4 @@
-/* let WhatsAlexa = require('../events');
+let WhatsAlexa = require('../events');
 let Config = require('../config');
 let fs = require('fs');
 let {MessageType} = require('@adiwajshing/baileys');
@@ -9,7 +9,7 @@ let Modules = AlexaModules.list(Config.LANG, message.client.user.jid)
 let td = Config.WORKTYPE == 'public' ? false : true
 let hrs = new Date().getHours()
 
-var wish = ''
+/*var wish = ''
 var wishml = ''
 var wishid = ''
 var anti_link = ''
