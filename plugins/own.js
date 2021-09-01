@@ -1,4 +1,3 @@
-  
 let {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
 let WhatsAlexa = require('../events');
 let Config = require('../config');
@@ -229,7 +228,7 @@ WhatsAlexa.addCommand({pattern: 'setname ?(.*)', onlyGroup: true, dontAddCommand
     }
 ));
 
-WhatsAlexa.addCommand({pattern: 'filter ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+WhatsAlexa.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC}, (async (message, match) => {
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
   
@@ -253,7 +252,7 @@ WhatsAlexa.addCommand({pattern: 'filter ?(.*)', fromMe: true, dontAddCommandList
     }
 }));
 
-WhatsAlexa.addCommand({pattern: 'stop ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+WhatsAlexa.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC}, (async (message, match) => {
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
   
