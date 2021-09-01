@@ -1,5 +1,4 @@
 const fs = require("fs");
-const os = require("os");
 const path = require("path");
 const events = require("./events");
 const chalk = require('chalk');
@@ -7,20 +6,16 @@ const config = require('./config');
 const axios = require('axios');
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
-const {Message, StringSession, Image, Video} = require('./whatsalexa/');
+const {Message, StringSession, Image, Video} = require('./alexa/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
-const simpleGit = require('simple-git');
-const git = simpleGit();
-const crypto = require('crypto');
-const nw = '```Blacklist Defected!```'
+
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
+
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
-const Language = require('./language');
-const Lang = Language.getString('updater');
 
 
 const WhatsAlexaDB = config.DATABASE.define('WhatsAlexa', {
@@ -33,13 +28,14 @@ const WhatsAlexaDB = config.DATABASE.define('WhatsAlexa', {
         allowNull: false
     }
 });
+
 fs.readdirSync('./plugins/sql/').forEach(plugin => {
     if(path.extname(plugin).toLowerCase() == '.js') {
         require('./plugins/sql/' + plugin);
     }
 });
+
 const plugindb = require('./plugins/sql/plugin');
-var OWN = { ff: ',0,94768826133' }
 
 String.prototype.format = function () {
     var i = 0, args = arguments;
@@ -288,12 +284,12 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
          
         while (getGMTh == 19 && getGMTm == 1) {
             var announce = ''
-            if (config.LANG == 'EN') announce = '📢 New Version ( V4 First Release ) has Been Released Rhight now... 🥳\nAdded Few More Commands 🎯✨\nThis update was mainly to Change the Ropo due to the Database error & Private/Group Only Bugs!! 🎉'
-            if (config.LANG == 'ML') announce = '📢 പുതിയ പതിപ്പ് ( V4 First Release ) ഇപ്പോൾ റിലീസ് ചെയ്തു... 🥳\nകുറച്ച് കൂടുതൽ കമാൻഡുകൾ ചേർത്തിരിക്കുന്നു 🎯✨\nഈ അപ്ഡേറ്റ് പ്രധാനമായും ഡാറ്റാബേസ് പിശക് & സ്വകാര്യ/ഗ്രൂപ്പ് മാത്രം ബഗുകൾ കാരണം റോപ്പോ മാറ്റാൻ ആയിരുന്നു!! 🎉'
-            if (config.LANG == 'ID') announce = '📢 Versi Baru ( V4 First Release ) telah Dirilis Sekarang ...🥳\nMenambahkan Beberapa Perintah Lagi 🎯✨\nPembaruan ini terutama untuk Mengubah Ropo karena kesalahan Database & Bug Khusus Grup/Pribadi!! 🎉'
+            if (config.LANG == 'EN') announce = '📢 Announcement system is now been added to WhatsAlexa!! 🥳\nDaily We ( the developers ) will announce *events/features/something new* from this system 📝\nStay Connected ✅'
+            if (config.LANG == 'ML') announce = '📢 പ്രഖ്യാപന സംവിധാനം ഇപ്പോൾ WhatsAlexa- ൽ ചേർത്തിരിക്കുന്നു !! 🥳\nഎല്ലാ ദിവസവും ഞങ്ങൾ ( ഡവലപ്പർമാർ ) ഈ സിസ്റ്റത്തിൽ നിന്ന് *ഇവന്റുകൾ/സവിശേഷതകൾ/പുതിയ എന്തെങ്കിലും* പ്രഖ്യാപിക്കും 📝\nകണക്റ്റഡ് ആയി തുടരുക ✅'
+            if (config.LANG == 'ID') announce = '📢 Sistem pengumuman sekarang ditambahkan ke WhatsAlexa !! 🥳\nHarian Kami ( pengembang ) akan mengumumkan *acara/fitur/sesuatu yang baru* dari sistem ini 📝\nTetap Terhubung ✅'
             
             let video = ''
-            let image = 'https://thumbs.dreamstime.com/b/new-version-stamp-28261908.jpg'
+            let image = 'https://i.ibb.co/KGMms2Z/Whats-Alexa.jpg'
             
             if (video.includes('http') || video.includes('https')) {
                 var VID = video.split('youtu.be')[1].split(' ')[0].replace('/', '')
