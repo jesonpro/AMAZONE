@@ -14,7 +14,7 @@ const got = require('got');
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const crypto = require('crypto');
-const nw = '```Blacklist Defected!```'
+const AlexaModules = require('whatsalexa-npm');
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
@@ -153,132 +153,10 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
     
     setInterval(async () => { 
         if (config.AUTOBIO == 'true') {
-            if (conn.user.jid.startsWith('90')) { 
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('994')) { 
-                var ov_time = new Date().toLocaleString('AZ', { timeZone: 'Asia/Baku' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('94')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('351')) { 
-                var ov_time = new Date().toLocaleString('PT', { timeZone: 'Europe/Lisbon' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('75')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('RU', { timeZone: 'Europe/Kaliningrad' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('91')) { 
-                var ov_time = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('62')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('ID', { timeZone: 'Asia/Jakarta' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('49')) { 
-                var ov_time = new Date().toLocaleString('DE', { timeZone: 'Europe/Berlin' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('61')) {  
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('AU', { timeZone: 'Australia/Lord_Howe' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('55')) { 
-                var ov_time = new Date().toLocaleString('BR', { timeZone: 'America/Noronha' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('33')) {
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('FR', { timeZone: 'Europe/Paris' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('34')) { 
-                var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('44')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('GB', { timeZone: 'Europe/London' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('39')) {  
-                var ov_time = new Date().toLocaleString('IT', { timeZone: 'Europe/Rome' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('7')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('KZ', { timeZone: 'Asia/Almaty' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('998')) {  
-                var ov_time = new Date().toLocaleString('UZ', { timeZone: 'Asia/Samarkand' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else if (conn.user.jid.startsWith('993')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('TM', { timeZone: 'Asia/Ashgabat' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
-            else {
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('EN', { timeZone: 'America/New_York' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await conn.setStatus(biography)
-            }
+            var timezone_bio = await WhatsAsenaStack.timezone(WhatsAsenaCN.user.jid)
+            var date_bio = await WhatsAsenaStack.datebio(config.LANG)
+            const biography = '📅 ' + date_bio + '\n⌚ ' + timezone_bio + '\n\n⏱ Auto Bio By WhatsAlexa'
+            await WhatsAsenaCN.setStatus(biography)
         }
     }, 7890);
     
@@ -288,9 +166,9 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
          
         while (getGMTh == 19 && getGMTm == 1) {
             var announce = ''
-            if (config.LANG == 'EN') announce = '📢 Announcement system is now been added to WhatsAlexa!! 🥳\nDaily We ( the developers ) will announce *events/features/something new* from this system 📝\nStay Connected ✅'
-            if (config.LANG == 'ML') announce = '📢 പ്രഖ്യാപന സംവിധാനം ഇപ്പോൾ WhatsAlexa- ൽ ചേർത്തിരിക്കുന്നു !! 🥳\nഎല്ലാ ദിവസവും ഞങ്ങൾ ( ഡവലപ്പർമാർ ) ഈ സിസ്റ്റത്തിൽ നിന്ന് *ഇവന്റുകൾ/സവിശേഷതകൾ/പുതിയ എന്തെങ്കിലും* പ്രഖ്യാപിക്കും 📝\nകണക്റ്റഡ് ആയി തുടരുക ✅'
-            if (config.LANG == 'ID') announce = '📢 Sistem pengumuman sekarang ditambahkan ke WhatsAlexa !! 🥳\nHarian Kami ( pengembang ) akan mengumumkan *acara/fitur/sesuatu yang baru* dari sistem ini 📝\nTetap Terhubung ✅'
+            if (config.LANG == 'EN') announce = '📢 New Version ( V4 First Release ) Has been Released Rhight Now...\n\nAdded a Few more Features, This update was mainly for making codes encrypted with NPM 🥳'
+            if (config.LANG == 'ML') announce = '📢 പുതിയ പതിപ്പ് ( V4 First Release ) ഇപ്പോൾ റിലീസ് ചെയ്തിരിക്കുന്നു...\n\nകുറച്ച് പുതിയ സവിശേഷതകൾ ചേർത്തു, ഈ അപ്ഡേറ്റ് പ്രധാനമായും NPM ഉപയോഗിച്ച് എൻക്രിപ്റ്റ് ചെയ്ത കോഡുകൾ ഉണ്ടാക്കുന്നതിനാണ്. 🥳'
+            if (config.LANG == 'ID') announce = '📢 Versi Baru ( V4 First Release ) Telah Dirilis Sekarang...\n\nMenambahkan Beberapa Fitur lagi, Pembaruan ini terutama untuk membuat kodes yang dienkripsi dengan NPM 🥳'
             
             let video = ''
             let image = 'https://i.ibb.co/KGMms2Z/Whats-Alexa.jpg'
@@ -333,20 +211,38 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             // Görüşürüz Mesajı
             var gb = await getMessage(msg.key.remoteJid, 'goodbye');
             if (gb !== false) {
-                let pp
-                try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
-                await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message }); });
+                if (gb.message.includes('{gpp}')) {
+                    let ppUrl = await conn.getProfilePicture(msg.key.remoteJid) 
+                    let nwjson = await conn.groupMetadata(msg.key.remoteJid)
+                    const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
+                    let user = '@' + msg.messageStubParameters[0].split('@')[0]
+                    await conn.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message.replace('{gpp}', '').replace('{@user}', user).replace('{botowner}', config.OWNER).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
+                } else {
+                    let nwjson = await conn.groupMetadata(msg.key.remoteJid)
+                    let user = '@' + msg.messageStubParameters[0].split('@')[0]
+                    let pp
+                    try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
+                    await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+                    await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{gname}', nwjson.subject).replace('{@user}', user).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', config.OWNER) }); });
             }
             return;
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
             // Hoşgeldin Mesajı
             var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {
-               let pp
-                try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
-                await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message }); });
+                if (gb.message.includes('{gpp}')) {
+                    let ppUrl = await conn.getProfilePicture(msg.key.remoteJid) 
+                    let nwjson = await conn.groupMetadata(msg.key.remoteJid)
+                    const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
+                    let user = '@' + msg.messageStubParameters[0].split('@')[0]
+                    await conn.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message.replace('{gpp}', '').replace('{@user}', user).replace('{botowner}', config.OWNER).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
+                } else {
+                    let nwjson = await conn.groupMetadata(msg.key.remoteJid)
+                    let user = '@' + msg.messageStubParameters[0].split('@')[0]
+                    let pp
+                    try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
+                    await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+                    await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message.replace('{gname}', nwjson.subject).replace('{@user}', user).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', config.OWNER) }); });
             }
             return;
         }
