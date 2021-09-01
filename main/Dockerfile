@@ -1,12 +1,13 @@
-# We are using WhatsAsena's Dockerfile
-# But We will not be a Fake bot of WhatsAsena
-# We are Only using the Dockerfile & Base
-# © WhatsAlexa, Made by TOXIC-DEVIL
+/* Copyright (C) 2021 TENUX-Neotro.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+NEOTROX - TEENUHX
+*/
 
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/TOXIC-DEVIL/WhatsAlexaBeta /root/WhatsAlexaBeta
-WORKDIR /root/WhatsAlexaBeta/
+RUN git clone https://github.com/jesonpro/Amazone /root/Amazone
+WORKDIR /root/Amazone/
 ENV TZ=Europe/Istanbul
 RUN npm install supervisor -g
 RUN yarn install --no-audit
