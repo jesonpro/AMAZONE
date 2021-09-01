@@ -380,6 +380,7 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                 } else {
                     var text_msg = undefined;
                 }
+
                 if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo')
                     && msg.message && msg.message.imageMessage !== null && 
                     (command.pattern === undefined || (command.pattern !== undefined && 
@@ -402,19 +403,14 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-                    if ((OWN.ff == ",0,94768826133" && msg.key.fromMe === false && command.fromMe === true &&
-                        (msg.participant && OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWN.ff || OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWN.ff)
-                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
-                        if (command.onlyPinned && chat.pin === undefined) return;
-                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
-                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
-                    }
-
+    
                     if (sendMsg) {
                         if (config.SEND_READ && command.on === undefined) {
                             await conn.chatRead(msg.key.remoteJid);
                         }
+                        
                         var match = text_msg.match(command.pattern);
+                        
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
                         && msg.message.imageMessage !== null) {
                             whats = new Image(conn, msg);
@@ -424,13 +420,11 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         } else {
                             whats = new Message(conn, msg);
                         }
-                        if (msg.key.fromMe && command.deleteCommand) { 
-                            var wrs = conn.user.phone.wa_version.split('.')[2]
-                            if (wrs < 11) {
-                                await whats.delete() 
-                            }
-                        } 
-
+                        
+                        if (command.deleteCommand && msg.key.fromMe) {
+                            await whats.delete(); 
+                        }
+                        
                         try {
                             await command.function(whats, match);
                         } catch (error) {
@@ -449,6 +443,7 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             }
         )
     });
+
     try {
         await conn.connect();
     } catch {
