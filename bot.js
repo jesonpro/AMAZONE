@@ -433,8 +433,7 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
 
                         try {
                             await command.function(whats, match);
-                        }
-                        catch (error) {
+                        } catch (error) {
                             if (config.LANG == 'EN') {
                                 await conn.sendMessage(conn.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { caption: '*『 ERROR 』*\n\n*WhatsAlexa an error has occurred!*\n_Report this error to the developer! [ TOXIC-DEVIL ]._\n\n*Error:* ```' + error + '```\n\n' });
                                 
@@ -450,7 +449,6 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             }
         )
     });
-
     try {
         await conn.connect();
     } catch {
