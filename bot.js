@@ -289,7 +289,7 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             if (config.LANG == 'ID') announce = '📢 Versi Baru ( V4 First Release ) telah Dirilis Sekarang ...🥳\nMenambahkan Beberapa Perintah Lagi 🎯✨\nPembaruan ini terutama untuk Mengubah Ropo karena kesalahan Database & Bug Khusus Grup/Pribadi!! 🎉'
             
             let video = ''
-            let image = 'https://i.ibb.co/KGMms2Z/Whats-Alexa.jpg'
+            let image = 'https://thumbs.dreamstime.com/b/new-version-stamp-28261908.jpg'
             
             if (video.includes('http') || video.includes('https')) {
                 var VID = video.split('youtu.be')[1].split(' ')[0].replace('/', '')
