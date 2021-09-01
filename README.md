@@ -4,7 +4,10 @@
 
 <p align="center">
     <a href="https://github.com/TOXIC-DEVIL">
-        <img src="https://camo.githubusercontent.com/ef94285cea0a6e81a864d96c3b2f5336a820c446d499477105d5c5fa7a54ef52/68747470733a2f2f726561646d652d747970696e672d7376672e6865726f6b756170702e636f6d3f73697a653d33332677696474683d31303030266c696e65733d57656c636f6d652b546f2b5768617473416c6578612e2e2e2b5468616e6b2b596f752b466f722b5669736974696e672e2e2e2e" width="1000" height="33">
+        <img
+            src="https://readme-typing-svg.herokuapp.com?size=33&width=1000&lines=Welcome+To+WhatsAlexa...+Thank+You+For+Visiting...."
+            alt="Typing SVG"
+        />
     </a>
 </p>
 
@@ -16,6 +19,12 @@
 <p align="center">
     WhatsAlexa is a Helper WhatsApp Bot Written By @TOXIC-DEVIL with Baileys. Alexa has a lot of Features/Commans Including Voice Chat [ AI ].
     <br>
+     <img src="https://img.shields.io/github/repo-size/TOXIC-DEVIL/WhatsAlexa?color=green&label=Repo%20total%20size&style=plastic">
+
+<p align="center">
+<a href="https://github.com/TOXIC-DEVIL/WhatsAlexa/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/TOXIC-DEVIL/WhatsAlexa?color=blue&style=flat-square"></a>
+<a href="https://github.com/TOXIC-DEVIL/WhatsAlexa/network/members"><img title="Forks" src="https://img.shields.io/github/forks/TOXIC-DEVIL/WhatsAlexa?color=pink&style=flat-square"></a>
+
 
 ## ⚙️ Setup ⚙️
 ```
